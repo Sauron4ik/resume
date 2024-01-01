@@ -1,0 +1,186 @@
+{{! 
+Це код container файлу для person сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/person"
+}}
+
+<div>
+        {{#with person}}
+        <hr />
+          <div>
+            <h1>{{name}}</h1>
+          </div>
+          <hr />
+          <div>
+          <b>Age</b> - {{age}}</div>
+          <div><b>Gender</b> - {{gender}}</div>
+          <br />
+          <div><address>
+            {{> address}}
+            </address></div>
+            <hr />
+            <section>
+              {{> title data="Education" big=false }}
+              <div>
+                {{#each education}}
+                <ul>
+                <li>
+                  Degree - {{degree}},</li>
+                  <li>Major - {{major}},</li>
+                  <li>University - {{university}},</li>
+                  <li>Graduation year - {{graduationYear}}.
+                </li>
+                </ul>
+                {{/each}}
+              </div>
+            </section>
+            <br />
+            <hr />
+            <section>
+              {{> title data="Work experience" big=false }}
+              {{#each workExperience}}
+                <ul>
+                <li>
+                  Company - {{company}} <em>(year founded - {{year_founded}}, industry - {{industry}})</em>,</li>
+                  <li>Job title - {{title}},</li>
+                  <li>Start date - {{startDate}},</li>
+                  <li>End date - {{endDate}}.
+                </li>
+                </ul>
+                <div>
+              <em><b>Responsibilities - </b></em>{{responsibilities}}
+              </div>
+              
+          </section>
+          <br />
+          <hr />
+          <section>
+            {{> title data="Employees" big=false }}
+            <div>
+              <ul>
+
+            {{#each employees}}
+            <li>Name - {{name}},</li>
+            <li>Position - {{position}},</li>
+            <li>Department - {{department}}.</li>
+            </ul>
+            </div>
+          </section>
+          <br />
+          <hr />
+          <section>
+          <div>
+            <h4>Projects</h4>
+          </div>
+          <div>
+          <ul>
+            {{#each projects }}
+              <li>
+                Name - {{name}},
+              </li>
+              <li>
+                Description - {{description}},
+              </li>
+              <li>
+                Status - {{status}}.
+              </li>
+            </ul>
+            </div>
+            </section>
+            <br />
+            <hr />
+             <section>
+          <div>
+            <h4>Teams</h4>
+          </div>
+          <div>
+          <ul>
+            {{#each teams }}
+              <li>
+                Team name - {{team_name}},
+              </li>
+              <li>
+                Team leader - {{#with team_leader}}
+                {{name}},</li>
+              <li>
+                <a href="mailto:john.smith@example.com">Email - {{email}}</a>
+              </li>
+               {{/with}}
+            </ul>
+            </div>
+            </section>
+
+             <br />
+            <hr />
+             <section>
+          <div>
+            <h4>Team memb</h4>
+          </div>
+          <div>
+          <ul>
+            {{#each team_members }}
+              <li>
+                Name - {{name}},
+              </li>
+              <li>
+                Title - {{title}},
+                </li>
+              <li>
+                <a href="mailto:alice.johnson@example.com">Email - {{email}}</a>
+              </li>
+              <li>
+                {{skills}}
+              </li>
+            </ul>
+            </div>
+            </section>
+            <br />
+            <hr />
+            <section>
+             <h4>Project</h4>
+          <div>
+          <ul>
+            {{#each projects }}
+              <li>
+                Name - {{name}},
+              </li>
+              <li>
+                Description - {{description}},
+                </li>
+              <li>
+                Technologies - {{technologies}}.
+              </li>
+            </ul>
+            </div>
+            </section>
+            <br />
+            <hr />
+             <section>
+             <h4> Team members</h4>
+          <div>
+               <ul>
+                {{#each team_members}}
+                  <li>
+                
+                    Name - {{name}},
+                  </li>
+                  <li>
+                    title - {{title}},
+                  </li>
+                  {{/each}}
+                  </ul>
+                </div>
+               </section>
+                
+            {{/each}}
+            {{/each}}
+          {{/each}}
+         {{/each}}
+       {{/each}}
+     {{/each}}
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/person.hbs
+    Адже наш layout/person.hbs має вже структуру HTML
+--}}
