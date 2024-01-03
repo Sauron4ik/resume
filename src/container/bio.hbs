@@ -1,0 +1,189 @@
+<div>
+  <hr />
+  <div>
+    <h1>{{name}}</h1>
+  </div>
+  <hr />
+  <div>
+    <b>Birthdate</b> - {{birthdate}}
+  </div>
+  <div>
+    <b>Birthplace</b> - {{birthplace}}
+  </div>
+  <div>
+    <b>Deathdate</b> - {{deathdate}}
+  </div>
+  <div>
+    <b>Deathplace</b> - {{deathplace}}
+  </div>
+  <div>
+    <b>Nationality</b> - {{nationality}}
+  </div>
+  <div>
+    <b>Occupation</b> - {{occupation}}
+  </div>
+  <div>
+  <b>Known for:</b>
+  <ul>
+  {{#each known_for}}
+  <li>
+  <em>{{this}}</em>
+  {{/each}}
+  </li>
+  </ul>
+  </div>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Education" big=false }}
+    <div>
+      {{#each education}}
+      <ul>
+        <li>
+          Degree - {{degree}},
+        </li>
+        <li>
+          Field - {{field}},
+        </li>
+        <li>
+          Institution - {{institution}},
+        </li>
+        <li>
+          Year - {{year}}.
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Notable Publications" big=false }}
+    <div>
+      {{#each notable_publications}}
+      <ul>
+        <li>
+          Title - {{title}},
+        </li>
+        <li>
+          Year - {{year}},
+        </li>
+        <li>
+          Publisher - {{publisher}}.
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Partners" big=false }}
+    <div>
+      {{#each partners}}
+      <ul>
+        <li>
+          Name - {{name}},
+        </li>
+        <li>
+          Relationship - {{relationship}},
+        </li>
+        <li>
+          Years - {{years}}.
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Awards" big=false }}
+    <div>
+      {{#each awards}}
+      <ul>
+        <li>
+          Title - {{title}},
+        </li>
+        <li>
+          Year - {{year}},
+        </li>
+        <li>
+          Description - {{description}}.
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Influences" big=false }}
+    <div>
+      {{#each influences}}
+      <li>{{this}}</li>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Influenced" big=false }}
+    <div>
+      {{#each influenced}}
+      <li>{{this}}</li>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Quotes" big=false }}
+    <div>
+      {{#each quotes}}
+      <li>{{this}}</li>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Major Discoveries" big=false }}
+    <div>
+      {{#each major_discoveries}}
+      <ul>
+        <li>
+          Title - {{title}},
+        </li>
+        <li>
+          Year - {{year}},
+        </li>
+        <li>
+          Description - {{description}}.
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+  </section>
+  <br />
+  <hr />
+  <section>
+    {{> title data="Contributions" big=false }}
+    <div>
+      <ul>
+        <li>
+          Title - {{contributions.title}},
+        </li>
+        <li>
+          Description - {{contributions.description}},
+        </li>
+        <li>
+          Year - {{contributions.year}},
+        </li>
+        <li>
+          Field - {{contributions.field}}.
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
