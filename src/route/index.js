@@ -666,6 +666,7 @@ router.get('/car', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
+    layout: 'basic',
     make: 'Toyota',
     model: 'Camry',
     year: 2022,
@@ -765,6 +766,7 @@ router.get('/js', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
+    layout: 'basic',
     name: 'JavaScript',
     description:
       'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
@@ -840,13 +842,12 @@ router.get('/js', function (req, res) {
 
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
-
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
+    layout: 'basic',
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
     price: 1999.99,
@@ -937,6 +938,7 @@ router.get('/facebook', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
+    layout: 'basic',
     name: 'Facebook',
     users: [
       {
