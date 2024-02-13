@@ -1117,6 +1117,18 @@ router.get('/bootstrap1', function (req, res) {
 
 // ================================================================
 
+router.get('/bootstrap2', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap2', {
+    layout: 'bootstrap',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 router.get('/bootstrap3', function (req, res) {
   // res.render генерує нам HTML сторінку
 
